@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - EMAM Shorts Poster</title>
+<meta name="description" content="Privacy Policy of EMAM Shorts Poster: what Google, YouTube and Meta data the app accesses, how it is used, stored, shared, protected, retained and deleted.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header><a href="./">EMAM Shorts Poster</a></header>
+
+<h1>Privacy Policy</h1>
+<p class="muted">Effective date: 9 November 2026 · Last updated: 9 November 2026</p>
+
+<p>This Privacy Policy explains how <strong>EMAM Shorts Poster</strong> ("the app", "we") accesses, uses, stores,
+shares, protects, retains and deletes data, including data received from Google APIs (YouTube Data API v3).
+The app is operated by its developer, reachable at <a href="mailto:hassaan98n@gmail.com">hassaan98n@gmail.com</a>.</p>
+
+<h2>1. What the app does</h2>
+<p>EMAM Shorts Poster is a scheduling tool. The person who connects their accounts (the "user") prepares short
+vertical videos on their own computer, and the app uploads and publishes those videos, with the title and
+description the user wrote, to the user's own YouTube channel, Instagram professional account and Facebook Page at
+the times the user chooses. The app has no public sign-up and does not access the accounts of anyone who has not
+connected them through the sign-in screens of Google or Meta.</p>
+
+<h2>2. Google user data the app accesses</h2>
+<p>When the user clicks <em>Connect YouTube</em>, Google asks the user to grant these permissions (OAuth scopes):</p>
+<ul>
+  <li><code>https://www.googleapis.com/auth/youtube.upload</code> - lets the app upload videos to the user's
+    YouTube channel and set each video's title, description, tags, category and privacy status.</li>
+  <li><code>https://www.googleapis.com/auth/youtube.readonly</code> - lets the app read the connected channel's
+    ID and name, so the user can confirm the right channel is connected.</li>
+</ul>
+<p>From Google the app receives and keeps only:</p>
+<ul>
+  <li>an OAuth <strong>refresh token</strong> and short-lived <strong>access tokens</strong> for the scopes above;</li>
+  <li>the connected <strong>channel ID and channel name</strong> (shown once on screen, not stored);</li>
+  <li>the <strong>video ID and link</strong> YouTube returns for each uploaded video, to show the user that the post
+    succeeded.</li>
+</ul>
+<p>The app does <strong>not</strong> access the user's email address, contacts, Gmail, Drive, watch history,
+subscriptions, comments, analytics, payment data or any other Google data, and it never reads, changes or deletes
+videos it did not upload.</p>
+
+<h2>3. Other data the app processes</h2>
+<ul>
+  <li><strong>Meta (Instagram and Facebook):</strong> a Page access token and the IDs of the user's Facebook Page and
+    linked Instagram professional account, used only to publish the user's videos and read back the post link.</li>
+  <li><strong>Content:</strong> the video files, cover images, titles, captions and posting times the user chooses.</li>
+  <li><strong>GitHub:</strong> the user's GitHub access token for the user's own repository, where the posting
+    schedule runs.</li>
+</ul>
+<p>The app does not collect data from viewers of the videos or from any other person. It has no analytics, no
+advertising and no tracking cookies.</p>
+
+<h2>4. How the data is used</h2>
+<p>Google user data is used <strong>only</strong> to provide the app's single feature: uploading the user's own
+videos to the user's own YouTube channel at the scheduled time, and confirming which channel is connected. It is
+not used for advertising, profiling, market research, credit decisions or training machine-learning models, and
+it is not used for any purpose other than this user-facing feature.</p>
+
+<h2>5. Where the data is stored and how it is protected</h2>
+<ul>
+  <li>The Google refresh token, the OAuth client credentials and the Meta Page token are stored as
+    <strong>encrypted GitHub Actions secrets</strong> in the user's own private GitHub repository. GitHub encrypts
+    them with libsodium sealed boxes; they cannot be read back through GitHub's website or API, and they are masked
+    in logs.</li>
+  <li>Tokens are sent only over HTTPS (TLS) to Google, Meta and GitHub.</li>
+  <li>Access tokens are held in memory only for the few minutes a posting run takes and are never written to disk.</li>
+  <li>Videos and the posting schedule are stored in the user's private GitHub repository.</li>
+</ul>
+
+<h2>6. Sharing and transfer</h2>
+<p>The app does not sell, rent, trade or share Google user data or any other data with third parties. Data leaves
+the user's computer only to reach the services it is meant for: video files and metadata are sent to YouTube,
+Instagram and Facebook when they are posted, and tokens, videos and the schedule are kept in the user's GitHub
+repository so the scheduled job can run. No person other than the user can see this data.</p>
+
+<h2>7. Retention and deletion</h2>
+<ul>
+  <li><strong>Tokens</strong> are kept until the user disconnects the account or deletes the secrets from the
+    GitHub repository (Settings → Secrets and variables → Actions). Deleting them removes them permanently.</li>
+  <li><strong>Video files</strong> are deleted from the GitHub repository automatically once they have been posted to
+    every chosen platform.</li>
+  <li><strong>Post records</strong> (title, time, link) are deleted automatically 45 days after posting.</li>
+  <li>Videos already published on YouTube stay on the user's channel, under the user's control, until the user
+    deletes them in YouTube Studio.</li>
+</ul>
+<p>To revoke the app's access to Google at any time, open
+<a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party apps with account
+access</a>, select EMAM Shorts Poster and choose <em>Remove access</em>. Access for Meta can be removed in Facebook
+Settings → Business Integrations. You can also email
+<a href="mailto:hassaan98n@gmail.com">hassaan98n@gmail.com</a> to request deletion of any stored data; requests are
+completed within 7 days.</p>
+
+<h2>8. Google API Services User Data Policy</h2>
+<p>EMAM Shorts Poster's use and transfer to any other app of information received from Google APIs will adhere to
+the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
+Policy</a>, including the Limited Use requirements.</p>
+
+<h2>9. YouTube API Services</h2>
+<p>The app uses YouTube API Services. By connecting a YouTube channel, the user agrees to the
+<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of personal data is
+described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2>10. Children</h2>
+<p>The app is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+<h2>11. Changes to this policy</h2>
+<p>If this policy changes, the updated version is posted on this page with a new "Last updated" date. Material
+changes affecting Google user data will be made only with the user's consent.</p>
+
+<h2>12. Contact</h2>
+<p>Questions or requests about this policy or your data:
+<a href="mailto:hassaan98n@gmail.com">hassaan98n@gmail.com</a></p>
+
+<footer class="muted"><nav><a href="./">Home</a><a href="terms.html">Terms of Service</a></nav></footer>
+</main>
+</body>
+</html>
