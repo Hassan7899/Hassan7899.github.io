@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EMAM Shorts Poster</title>
-<meta name="description" content="EMAM Shorts Poster schedules and uploads short vertical videos to your own YouTube channel (as YouTube Shorts), Instagram account and Facebook Page.">
+<meta name="description" content="EMAM Shorts Poster schedules and uploads short vertical videos to your own YouTube channel (as YouTube Shorts), TikTok account, Instagram account and Facebook Page.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 <h1>EMAM Shorts Poster</h1>
 <p><strong>EMAM Shorts Poster</strong> is a video scheduling app. It takes short vertical clips that you made from
 your own videos and publishes them, with the title and description you wrote, to <strong>your own</strong> YouTube
-channel as YouTube Shorts, and to your own Instagram account and Facebook Page, at the times you choose.</p>
+channel as YouTube Shorts, and to your own TikTok account, Instagram account and Facebook Page, at the times you choose.</p>
 <p>It is built for EMAM: short clips from the public Q&amp;A sessions of Engineer Muhammad Ali Mirza, posted
 regularly to the channel's social accounts.</p>
 
@@ -25,10 +25,11 @@ regularly to the channel's social accounts.</p>
 <ol>
   <li><strong>Prepare clips.</strong> On your computer, you cut a long video into short vertical clips (up to 3
     minutes each) and give each one a title, a description and hashtags.</li>
-  <li><strong>Schedule.</strong> You pick which clips to post, on which platforms (YouTube, Instagram, Facebook)
+  <li><strong>Schedule.</strong> You pick which clips to post, on which platforms (YouTube, TikTok, Instagram, Facebook)
     and at what dates and times.</li>
   <li><strong>Upload and publish.</strong> At each scheduled time the app uploads the clip to your YouTube channel
-    as a public Short, with your title and description, and publishes it as a Reel on Instagram and Facebook.</li>
+    as a public Short, with your title and description, sends it to TikTok (as a draft in your TikTok inbox, or as a
+    post), and publishes it as a Reel on Instagram and Facebook.</li>
   <li><strong>Report back.</strong> The app shows you the link of each published video, or the reason if a post
     failed, so you can retry it.</li>
 </ol>
@@ -49,6 +50,18 @@ single, specific reason:</p>
 token it needs to post on your behalf. You can remove the app's access at any time in your
 <a href="https://myaccount.google.com/permissions">Google Account settings</a>. All details are in the
 <a href="https://hassan7899.github.io/privacy.html">Privacy Policy</a>.</p>
+
+<h2>Why the app asks for access to your TikTok account</h2>
+<p>When you connect TikTok, TikTok asks you to allow these permissions. The app uses each one for a single reason:</p>
+<ul>
+  <li><strong>Read your profile info</strong> (<code>user.info.basic</code>): shows your TikTok username, so you can
+    confirm the right account is connected, and builds the link to each post.</li>
+  <li><strong>Upload videos as drafts</strong> (<code>video.upload</code>): sends your scheduled clip to your TikTok
+    inbox, where you review it and post it yourself.</li>
+  <li><strong>Post videos</strong> (<code>video.publish</code>): publishes your scheduled clip with your caption,
+    if you choose direct posting.</li>
+</ul>
+<p>The app reads nothing else from TikTok: no followers, messages, comments, likes or analytics.</p>
 
 <h2>Instagram and Facebook</h2>
 <p>For Instagram and Facebook, the app uses Meta's official API with your permission, only to publish your

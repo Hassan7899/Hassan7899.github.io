@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TikTok sign-in - EMAM Shorts Poster</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .code { display:block; width:100%; padding:12px; font:15px/1.4 ui-monospace,Consolas,monospace; word-break:break-all;
+          border:1px solid var(--line); border-radius:6px; background:transparent; color:var(--fg); }
+  button { margin-top:10px; padding:8px 16px; font:inherit; cursor:pointer; }
+</style>
+</head>
+<body>
+<main>
+<header><a href="https://hassan7899.github.io/">EMAM Shorts Poster</a></header>
+<h1 id="h">TikTok sign-in</h1>
+<div id="ok" hidden>
+  <p>Copy this code and paste it into <strong>EMAM Shorts Poster → Settings → TikTok → "Paste the code"</strong>.
+  It works once and expires in a few minutes.</p>
+  <textarea id="code" class="code" rows="3" readonly></textarea>
+  <button id="copy" type="button">Copy code</button> <span id="done" class="muted"></span>
+</div>
+<p id="err" hidden></p>
+<p id="none">This page receives the code after you sign in to TikTok from EMAM Shorts Poster.</p>
+<footer class="muted"><nav><a href="https://hassan7899.github.io/privacy.html">Privacy Policy</a><a href="https://hassan7899.github.io/terms.html">Terms of Service</a></nav></footer>
+</main>
+<script>
+  const q = new URLSearchParams(location.search);
+  const code = q.get("code"), error = q.get("error");
+  if (code) {
+    document.getElementById("none").hidden = true;
+    document.getElementById("ok").hidden = false;
+    document.getElementById("code").value = code;
+    document.getElementById("copy").onclick = async () => {
+      const box = document.getElementById("code");
+      try { await navigator.clipboard.writeText(code); } catch (e) { box.select(); document.execCommand("copy"); }
+      document.getElementById("done").textContent = "Copied";
+    };
+  } else if (error) {
+    document.getElementById("none").hidden = true;
+    const p = document.getElementById("err");
+    p.hidden = false;
+    p.textContent = "TikTok sign-in did not finish: " + error + " " + (q.get("error_description") || "");
+  }
+</script>
+</body>
+</html>

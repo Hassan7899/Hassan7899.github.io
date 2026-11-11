@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy - EMAM Shorts Poster</title>
-<meta name="description" content="Privacy Policy of EMAM Shorts Poster: what Google, YouTube and Meta data the app accesses, how it is used, stored, shared, protected, retained and deleted.">
+<meta name="description" content="Privacy Policy of EMAM Shorts Poster: what Google, YouTube, TikTok and Meta data the app accesses, how it is used, stored, shared, protected, retained and deleted.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <header><a href="./">EMAM Shorts Poster</a></header>
 
 <h1>Privacy Policy</h1>
-<p class="muted">Effective date: 9 November 2026 · Last updated: 9 November 2026</p>
+<p class="muted">Effective date: 9 November 2026 · Last updated: 11 November 2026</p>
 
 <p>This Privacy Policy explains how <strong>EMAM Shorts Poster</strong> ("the app", "we") accesses, uses, stores,
 shares, protects, retains and deletes data, including data received from Google APIs (YouTube Data API v3).
@@ -21,7 +21,7 @@ The app is operated by its developer, reachable at <a href="mailto:hassanmuhamma
 <h2>1. What the app does</h2>
 <p>EMAM Shorts Poster is a scheduling tool. The person who connects their accounts (the "user") prepares short
 vertical videos on their own computer, and the app uploads and publishes those videos, with the title and
-description the user wrote, to the user's own YouTube channel, Instagram professional account and Facebook Page at
+description the user wrote, to the user's own YouTube channel, TikTok account, Instagram professional account and Facebook Page at
 the times the user chooses. The app has no public sign-up and does not access the accounts of anyone who has not
 connected them through the sign-in screens of Google or Meta.</p>
 
@@ -48,6 +48,12 @@ videos it did not upload.</p>
 <ul>
   <li><strong>Meta (Instagram and Facebook):</strong> a Page access token and the IDs of the user's Facebook Page and
     linked Instagram professional account, used only to publish the user's videos and read back the post link.</li>
+  <li><strong>TikTok:</strong> when the user connects TikTok, TikTok grants the scopes <code>user.info.basic</code>
+    (to read the user's open ID, display name and username, to confirm the connected account and build post links),
+    <code>video.upload</code> (to send the user's scheduled video to their TikTok inbox as a draft) and
+    <code>video.publish</code> (to post the user's scheduled video with its caption, if the user chooses direct
+    posting). The app keeps a TikTok refresh token and the ID TikTok returns for each upload. It reads no
+    followers, messages, comments, likes or analytics.</li>
   <li><strong>Content:</strong> the video files, cover images, titles, captions and posting times the user chooses.</li>
   <li><strong>GitHub:</strong> the user's GitHub access token for the user's own repository, where the posting
     schedule runs.</li>
@@ -63,7 +69,7 @@ it is not used for any purpose other than this user-facing feature.</p>
 
 <h2>5. Where the data is stored and how it is protected</h2>
 <ul>
-  <li>The Google refresh token, the OAuth client credentials and the Meta Page token are stored as
+  <li>The Google and TikTok refresh tokens, the OAuth client credentials and the Meta Page token are stored as
     <strong>encrypted GitHub Actions secrets</strong> in the user's own private GitHub repository. GitHub encrypts
     them with libsodium sealed boxes; they cannot be read back through GitHub's website or API, and they are masked
     in logs.</li>
@@ -75,7 +81,7 @@ it is not used for any purpose other than this user-facing feature.</p>
 <h2>6. Sharing and transfer</h2>
 <p>The app does not sell, rent, trade or share Google user data or any other data with third parties. Data leaves
 the user's computer only to reach the services it is meant for: video files and metadata are sent to YouTube,
-Instagram and Facebook when they are posted, and tokens, videos and the schedule are kept in the user's GitHub
+TikTok, Instagram and Facebook when they are posted, and tokens, videos and the schedule are kept in the user's GitHub
 repository so the scheduled job can run. No person other than the user can see this data.</p>
 
 <h2>7. Retention and deletion</h2>
@@ -91,7 +97,8 @@ repository so the scheduled job can run. No person other than the user can see t
 <p>To revoke the app's access to Google at any time, open
 <a href="https://myaccount.google.com/permissions">Google Account → Security → Third-party apps with account
 access</a>, select EMAM Shorts Poster and choose <em>Remove access</em>. Access for Meta can be removed in Facebook
-Settings → Business Integrations. You can also email
+Settings → Business Integrations, and access for TikTok in the TikTok app under Settings and privacy →
+Security → Apps and services permissions. You can also email
 <a href="mailto:hassanmuhammad02p@gmail.com">hassanmuhammad02p@gmail.com</a> to request deletion of any stored data; requests are
 completed within 7 days.</p>
 
